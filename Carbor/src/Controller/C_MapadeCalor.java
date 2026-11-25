@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import Model.APILocais;
-import Model.APITemperatura;
+import Model.E_APILocais;
+import Model.E_APITemperatura;
 import Model.E_MapadeCalor;
 
 public class C_MapadeCalor {
@@ -14,7 +14,7 @@ public class C_MapadeCalor {
 	private List<Double> tempList = new ArrayList<Double>();
 	private List<String> bairrosList = new ArrayList<String>();
 	public List<E_MapadeCalor> coordBairros = new ArrayList<E_MapadeCalor>();
-	public APITemperatura apiTemp = new APITemperatura();
+	public E_APITemperatura apiTemp = new E_APITemperatura();
 	private Double tempMedia = 0.0;
 	private Double somaTemp = 0.0;
 	
@@ -83,7 +83,7 @@ public class C_MapadeCalor {
 	public void addCoordBairros(List<String> bairrosManaus) {
  		for(String i : bairrosManaus) {
  			String stringBusca = i + ", Manaus, Amazonas";
- 			APILocais apiLocais = new APILocais(stringBusca);
+ 			E_APILocais apiLocais = new E_APILocais(stringBusca);
  			Double latitude = apiLocais.ObterLatitude();
  			Double longitude = apiLocais.ObterLongitude();
  			E_MapadeCalor mp = new E_MapadeCalor(i, latitude, longitude);

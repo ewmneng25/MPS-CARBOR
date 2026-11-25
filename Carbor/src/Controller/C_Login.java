@@ -13,13 +13,16 @@ import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 
 import Model.E_DataUsuario;
+import Model.E_Usuario;
 
 public class C_Login {
 	public E_DataUsuario dataUsuario = new E_DataUsuario();
 	
-	public boolean FazerLogin(String email, String senha) {
+	public boolean FazerLogin(E_Usuario user, String email, String senha) {
 		boolean logado = dataUsuario.ConsultarDadosUsuario(email, senha);
 		if(logado) {
+			user.setEmail(email);
+			user.setSenha(senha);
 			return true;
 		}else {
 			return false;

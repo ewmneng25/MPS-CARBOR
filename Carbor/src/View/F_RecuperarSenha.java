@@ -145,9 +145,5 @@ public class F_RecuperarSenha extends JFrame{
 		}else {
 			return false;
 		}
-		
-		
-		
 	}
-	
 }

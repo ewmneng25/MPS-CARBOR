@@ -17,7 +17,7 @@ import javax.swing.JTextField;
 
 import Controller.C_MapadeCalor;
 import Controller.C_Registro;
-import Model.APITemperatura;
+import Model.E_APITemperatura;
 import Model.E_Registro;
 import Model.E_Usuario;
 
@@ -31,7 +31,7 @@ public class F_Registro extends JFrame{
 	public F_Registro(E_Usuario usuario, C_MapadeCalor mapaDeCalor) {
 		getContentPane().setBackground(new Color(255, 255, 255));		
 		setResizable(false);
-		setSize(1076, 766);
+		setSize(1076, 541);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 		
@@ -204,9 +204,5 @@ public class F_Registro extends JFrame{
 		C_Registro cReg = new C_Registro();
 		Double temperaturaNova = cReg.ReduzirTemperatura(local, qtdMudas);
 		return temperaturaNova;
-	}
-	
-	public void setLblStartTemp() {
-		
 	}
 }

@@ -44,7 +44,7 @@ public class F_Relatorio extends JFrame{
 		barraSuperior.setBounds(54, 33, 968, 71);
 		getContentPane().add(barraSuperior);
 		
-		String[] colunas = {"E-mail", "Bairro", "Quantidade de Mudas", "Nova Temperatura (ºC)", "Orçamento (R$)"};
+		String[] colunas = {"Bairro", "Quantidade de Mudas", "Nova Temperatura (ºC)", "Orçamento (R$)"};
 		
 		DefaultTableModel model = new DefaultTableModel(colunas, 0);
 		
@@ -61,7 +61,6 @@ public class F_Relatorio extends JFrame{
 		
 		for(E_Registro r : listaRegTabela) {
 			model.addRow(new Object[] {
-					usuario.getEmail(),
 					r.ConsultarLocal(),
 					r.ConsultarMudas(),
 					r.ConsultarTemperatura(),

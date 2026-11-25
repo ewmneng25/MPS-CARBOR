@@ -5,11 +5,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class APILocais {
+public class E_APILocais {
 	
 	private String linhaJson; 
 	
-	public APILocais(String bairro) {
+	public E_APILocais(String bairro) {
 		try {
 			// Adicionado +Amazonas para garantir precisão e evitar confusões no mapa
 			String urlString = "https://nominatim.openstreetmap.org/search?q=" + bairro.replace(" ", "+") + ",+Manaus,+Amazonas&format=json";

@@ -146,10 +146,8 @@ public class F_Login extends JFrame{
 	public void FazerLogin(String email, String senha) {
 		boolean logado;
 		E_Usuario user = new E_Usuario();
-		user.setEmail(email);
-		user.setSenha(senha);
 		C_Login controlLog = new C_Login();
-		logado = controlLog.FazerLogin(email, senha);
+		logado = controlLog.FazerLogin(user, email, senha);
 		if(logado) {
 			JOptionPane.showMessageDialog(null, "Login realizado!");
 			F_TelaPrincipal tp = new F_TelaPrincipal(user, mapaDeCalor);

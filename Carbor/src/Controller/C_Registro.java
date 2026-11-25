@@ -2,8 +2,8 @@ package Controller;
 
 import javax.swing.JOptionPane;
 
-import Model.APILocais;
-import Model.APITemperatura;
+import Model.E_APILocais;
+import Model.E_APITemperatura;
 import Model.E_DataRegistros;
 import Model.E_ListaRegistros;
 import Model.E_Registro;
@@ -19,8 +19,8 @@ public class C_Registro {
 	}
 	
 	public double ReduzirTemperatura(String local, int qMudas) {
-		APITemperatura apiTemp = new APITemperatura();
-		APILocais apiLocais = new APILocais(local);
+		E_APITemperatura apiTemp = new E_APITemperatura();
+		E_APILocais apiLocais = new E_APILocais(local);
 		Double latitude = apiLocais.ObterLatitude();
 		Double longitude = apiLocais.ObterLongitude();
 		String temp = apiTemp.BuscarTemperatura(latitude, longitude);

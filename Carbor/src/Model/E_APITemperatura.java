@@ -5,7 +5,7 @@ import java.net.http.HttpClient;//gerencia a comunicação entre programa e inte
 import java.net.http.HttpRequest;//representa oq estou pedindo 
 import java.net.http.HttpResponse;//representa a resposta do servidor
 
-public class APITemperatura {
+public class E_APITemperatura {
 	
 	public static String BuscarTemperatura(double latitude, double longitude) {
 		
